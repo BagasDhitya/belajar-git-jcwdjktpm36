@@ -1,0 +1,1 @@
+console.log('kerjakan exercise di folder ini')
