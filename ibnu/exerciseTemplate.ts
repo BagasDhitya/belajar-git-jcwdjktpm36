@@ -28,6 +28,8 @@ if (isPalindrome1) {
 }else {
     console.log(`"${str}" bukan palindrom.`);
 }  
+// cara kedua
+// console.log(isPalindrome1(str))
 console.log('----------------------');
 
 // 3. Write a code to convert centimeter to kilometer
@@ -36,6 +38,8 @@ let centimeters: number = 100000; // You can change this value to test with diff
 let kilometers: number = centimeters / 100000;
 console.log(`${centimeters} cm = ${kilometers} km`);
 console.log('----------------------');  
+// cara kedua
+// console.log(cmToKm(100000)) 
 
 // 4. Write a code to format number as currency
 // Example: 1000 to Rp.1.000,00
@@ -47,12 +51,34 @@ let formattedAmount: string = new Intl.NumberFormat('id-ID', {
     maximumFractionDigits: 2
 }).format(amount);
 console.log(`Formatted amount: ${formattedAmount}`);
+
+console.log('----------------------');
+// Cara kedua
+// Ex : 1000 = 1.000 =Rp.1.000,00
+// Looping terbalik dari belakang(i--)
+// Buat variable penampung untuk hasil output
+// variable penampung untuk jumlah pengulangan -> count++
+// periksa setiap pengulangan 3 (Jika count % 3 === 0) beri tanda titik
+
+// let data = amount.toString().length
+// let rupiah: string = '';
+// let count: number = 0;
+// for (let i: number = data - 1; i >= 0; i--) {
+//     console.log(i)
+
+//     rupiah = data.charAt(i -1) + rupiah;
+//     count++;
+//     console.log(count)
+//     if (count % 3 === 0 && i !== 0) {
+//         rupiah = '.' + rupiah;
+//     }
+// }console.log(`Formatted amount: Rp.${rupiah},00`); 
 console.log('----------------------');
 
 // 5. Write a code to remove the first occurence of a given "search string" from a string
 // Example: "Hello World" with search string = "Ell" = "Ho World"
-let originalString: string = "Hello World"; // You can change this value to test with different strings
-let searchString: string = "Ell"; // You can change this value to test with different search strings
+let originalString1: string = "Hello World"; // You can change this value to test with different strings
+let searchString1: string = "Ell"; // You can change this value to test with different search strings
 let index: number = originalString.toLowerCase().indexOf(searchString.toLowerCase());
 if (index !== -1) {
     let modifiedString: string = originalString.slice(0, index) + originalString.slice(index + searchString.length);
@@ -81,8 +107,8 @@ console.log('----------------------');
 
 // 8. Write a code to find the largest of two given integers
 // Example: num1=42, num2=27 = 42
-let num1: number = 42; // You can change this value to test with different integers
-let num2: number = 27; // You can change this value to test with different integers
+let num1Ib: number = 42; // You can change this value to test with different integers
+let num2Ib: number = 27; // You can change this value to test with different integers
 let largest: number = num1 > num2 ? num1 : num2;
 console.log(`Largest of ${num1} and ${num2} is: ${largest}`);
 console.log('----------------------');
